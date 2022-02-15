@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
      * this function will calculate the total number of pizzas needed for the certain people.
      * this function will ask value of total number of people and the ratio of hunger and it will calculate total pizzas.
      *
-     *
+     *@param view
      */
 
     fun calculateClick(view: View) {
