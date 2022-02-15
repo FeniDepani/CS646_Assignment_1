@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- using LinearLayout for the pizza party application -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -12,6 +13,7 @@
     android:paddingTop="16dp"
     tools:context=".MainActivity">
 
+    <!-- This TextView will used to display the text,which says Number of people -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,6 +21,7 @@
         android:textSize="24sp"
         android:labelFor="@id/num_attend_edit_text" />
 
+    <!-- This EditText is used to enter the text, for example, number of people who want to have pizza -->
     <EditText
         android:id="@+id/num_attend_edit_text"
         android:layout_width="wrap_content"
@@ -26,8 +29,9 @@
         android:inputType="number"
         android:ems="5"
         android:importantForAutofill="no"
-        android:hint="10" />
+        android:hint="8" />
 
+    <!-- This TextView will used to display the text,which says How hungry? -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -36,22 +40,26 @@
         android:textSize="24sp"
         android:labelFor="@id/hungry_radio_group" />
 
+    <!-- this RadioGroup will hold the all radio button, which are used in this application -->
     <RadioGroup
         android:id="@+id/hungry_radio_group"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
+
         <RadioButton
             android:id="@+id/light_radio_button"
             android:text="Light"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+        <!--  -->
         <RadioButton
             android:id="@+id/medium_radio_button"
             android:text="Medium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true" />
+        <!--  -->
         <RadioButton
             android:id="@+id/ravenous_radio_button"
             android:text="Ravenous"
@@ -59,6 +67,7 @@
             android:layout_height="wrap_content" />
     </RadioGroup>
 
+    <!-- This TextView will used to display the text,which says Total pizzas:? -->
     <TextView
         android:id="@+id/num_pizzas_text_view"
         android:text="Total pizzas: ?"
@@ -67,6 +76,7 @@
         android:layout_marginTop="20dp"
         android:textSize="24sp"/>
 
+    <!-- When we click this button it will call calculateClick function and display to total pizzas needed. -->
     <Button
         android:id="@+id/calc_button"
         android:text="Calculate"
